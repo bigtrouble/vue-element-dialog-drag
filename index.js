@@ -1,6 +1,6 @@
-
+"use strict";
 var vueElementDialogDraggable = {}
-vueElementDialogDraggable.install = function (Vue, options) {
+vueElementDialogDraggable.install = function(Vue, options){
 	
 	Vue.directive('draggable', {
 		
@@ -13,12 +13,12 @@ vueElementDialogDraggable.install = function (Vue, options) {
 			title.style["-moz-user-select"] = "none";
 			title.style.cursor="default";
 
-			var offsetX = 0;
-			var offsetY = 0;
+			dlg.offsetX = 0;
+			dlg.offsetY = 0;
 
 			var move = function(e){
-				dlg.style.left = (e.pageX - offsetX) + 'px';
-				dlg.style.top = (e.pageY - offsetY) + 'px';
+				dlg.style.left = (e.pageX - dlg.offsetX) + 'px';
+				dlg.style.top = (e.pageY - dlg.offsetY) + 'px';
 			}
 
 			var up = function() {
@@ -27,8 +27,8 @@ vueElementDialogDraggable.install = function (Vue, options) {
 			}
 
 			var down = function(e){
-				offsetX = (e.pageX - dlg.offsetLeft);
-				offsetY = (e.pageY - dlg.offsetTop );
+				dlg.offsetX = (e.pageX - dlg.offsetLeft);
+				dlg.offsetY = (e.pageY - dlg.offsetTop );
 
 				addEventListener('mousemove', move);
 				addEventListener('mouseup', up);
@@ -36,6 +36,8 @@ vueElementDialogDraggable.install = function (Vue, options) {
 
 			var header = el.getElementsByClassName("el-dialog__header")[0];
 			header.addEventListener('mousedown', down);
-		}
-	}
+               }
+	});
 }
+
+module.exports = vueElementDialogDraggable;
