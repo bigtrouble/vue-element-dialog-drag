@@ -15,4 +15,4 @@ Vue.use(DlgDraggable);
 ```
 
 # Example
-[linkname](https://youtu.be/TzaRQ7opqyU)
+[![Youtube](https://img.youtube.com/vi/TzaRQ7opqyU/0.jpg)](https://www.youtube.com/watch?v=TzaRQ7opqyU)
