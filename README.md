@@ -13,3 +13,6 @@ Vue.use(DlgDraggable);
 </el-dialog>
 
 ```
+
+# Example
+[linkname](https://youtu.be/TzaRQ7opqyU)
