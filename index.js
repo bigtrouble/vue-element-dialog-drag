@@ -17,6 +17,8 @@ vueElementDialogDraggable.install = function(Vue, options){
 			dlg.offsetY = 0;
 
 			var move = function(e){
+				dlg.style.marginLeft = '0px';
+				dlg.style.marginTop = '0px';
 				dlg.style.left = (e.pageX - dlg.offsetX) + 'px';
 				dlg.style.top = (e.pageY - dlg.offsetY) + 'px';
 			}
