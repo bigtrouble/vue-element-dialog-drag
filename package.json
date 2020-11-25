@@ -1,7 +1,7 @@
 {
   "name": "vue-element-dialog-draggable",
-  "version": "1.0.3",
-  "description": "support ElementUI dialog drag",
+  "version": "1.0.4",
+  "description": "Support ElementUI dialog drag",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/bigtrouble/vue-element-dialog-drag.git"
   },
-  "author": "admin",
+  "author": {
+    "name": "bigtrouble",
+    "email": "hcmsxy@163.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bigtrouble/vue-element-dialog-drag/issues"
