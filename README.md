@@ -6,7 +6,9 @@ support ElementUI dialog drag
 npm install vue-element-dialog-draggable --save
 
 import DlgDraggable from "vue-element-dialog-draggable"
-Vue.use(DlgDraggable);
+Vue.use(DlgDraggable, {
+  containment: true //Constrains dragging to within the bounds of the window.  Default: false.
+});
 
 <el-dialog :title="mydialog" v-draggable>
   //....
