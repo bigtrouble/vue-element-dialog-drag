@@ -14,7 +14,7 @@
     "name": "bigtrouble",
     "email": "hcmsxy@163.com"
   },
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bigtrouble/vue-element-dialog-drag/issues"
   },
