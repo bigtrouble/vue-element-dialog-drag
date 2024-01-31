@@ -27,6 +27,20 @@ D.install = function(Vue, options){
 
       var left = e.pageX - dlg.offsetX
       var top  = e.pageY - dlg.offsetY
+      var computedStyleError = false;
+      try {
+        var cstyle = getComputedStyle(dlg);
+        var mtop = Number.parseFloat(cstyle.marginTop);
+        var mleft = Number.parseFloat(cstyle.marginLeft);
+        if (mtop > 0) {
+          top = top - mtop;
+        }
+        if (mleft > 0) {
+          left = left - mleft;
+        }
+      }catch (e){
+        computedStyleError=true;
+      }
       if(containment) {
         //Constrains left & top
         left = Math.max(left, 0)
@@ -36,7 +50,9 @@ D.install = function(Vue, options){
         left = Math.min(left, viewport.width  - dlg.offsetWidth)
         top  = Math.min(top , viewport.height - dlg.offsetHeight)
       }
-      dlg.style.margin     = '0px'
+      if(computedStyleError){
+        dlg.style.margin   = '0px'
+      }
       dlg.style.left       = left + 'px'
       dlg.style.top        = top  + 'px'
     }
